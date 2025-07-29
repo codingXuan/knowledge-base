@@ -6,6 +6,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 export default defineUserConfig({
     // --- 网站基础配置 ---
+    base: "/knowledge-base/",
     lang: "zh-CN",
     title: "我的知识库",
     description: "一个记录学习与思考的地方",
