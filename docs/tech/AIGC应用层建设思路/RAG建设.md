@@ -38,7 +38,7 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是一种将**信息
 
 
 
-****`**metadata**`** 示例**：
+****`metadata`** 示例**：
 
 
 
