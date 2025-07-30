@@ -1,5 +1,6 @@
 ---
-title: prompt工程 
+title: prompt工程
+date: 2024-06-22 
 ---
 
 **1. 核心定位与原则**

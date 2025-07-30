@@ -1,5 +1,6 @@
 ---
-title: rlhf_dpo 
+title: rlhf_dpo
+date: 2025-07-02  
 ---
 
 #### **1. 核心目标：对齐（Alignment）——让模型更像“人”**

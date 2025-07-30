@@ -1,5 +1,6 @@
 ---
-title: TGI 
+title: TGI
+date: 2025-06-20 
 ---
 
 #### **1. 核心定位：Hugging Face官方出品的“生产级”推理解决方案**

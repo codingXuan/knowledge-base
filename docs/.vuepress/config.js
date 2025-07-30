@@ -95,6 +95,7 @@ export default defineUserConfig({
                     prefix: '/tech/AIGC应用层建设思路/',
                     collapsible: true,
                     children: [
+                        { text: 'AIGC随笔', icon: 'file-lines', link: 'AIGC应用层建设思路.md' },
                         { text: 'RAG建设', icon: 'file-lines', link: 'RAG建设.md' },
                         { text: '训练策略', icon: 'file-lines', link: '训练策略.md' },
                         { text: '微调策略', icon: 'file-lines', link: '微调策略.md' },
@@ -105,7 +106,6 @@ export default defineUserConfig({
                         { text: '长文本与算力', icon: 'file-lines', link: '长文本与算力.md' },
                         { text: '部署与运维', icon: 'file-lines', link: '部署与运维.md' },
                         { text: '安全、隐私与伦理', icon: 'file-lines', link: '安全、隐私与伦理.md' },
-                        { text: 'AIGC应用层建设思路', icon: 'file-lines', link: 'AIGC应用层建设思路.md' },
                     ],
                 },
                 {

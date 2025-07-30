@@ -1,5 +1,6 @@
 ---
 title: LangChain
+date: 2024-10-11
 ---
 
 #### **1. 核心定位：AIGC应用开发的“Spring Boot”**

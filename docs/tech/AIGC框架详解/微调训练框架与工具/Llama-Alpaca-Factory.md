@@ -1,5 +1,6 @@
 ---
-title: Llama-Alpaca-Factory 
+title: Llama-Alpaca-Factory
+date: 2025-04-09 
 ---
 
 #### **1. 核心定位：一站式、可视化的LLM微调平台**

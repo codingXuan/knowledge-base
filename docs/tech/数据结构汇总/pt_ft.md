@@ -1,5 +1,6 @@
 ---
-title: pt_ft 
+title: pt_ft
+date: 2025-07-02  
 ---
 
 #### **Part 1: 继续预训练 (Continued Pre-training, PT)**

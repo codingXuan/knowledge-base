@@ -1,5 +1,6 @@
 ---
 title: Hugging Face Trainer _ PEFT
+date: 2025-03-20
 ---
 
 #### **1. Hugging Face **`**Trainer**`**：训练流程的“高级自动化”**
