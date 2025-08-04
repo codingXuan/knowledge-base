@@ -4,7 +4,7 @@ date: 2024-05-11
 ---
 
 #### **1. 核心理念：为LLM配备一个可检索的“长期记忆”**
-RAG（Retrieval-Augmented Generation，检索增强生成）是一种将**信息检索（Retrieval）**与**文本生成（Generation）**相结合的强大架构。其核心理念是，在让大语言模型（LLM）回答问题或执行任务之前，先从一个外部的、可信的知识库中检索出最相关的信息片段，并将这些信息作为上下文（Context）一并提供给LLM。
+RAG（Retrieval-Augmented Generation，检索增强生成）是一种将**信息检索**（**Retrieval**）与**文本生成**（**Generation**）相结合的强大架构。其核心理念是，在让大语言模型（LLM）回答问题或执行任务之前，先从一个外部的、可信的知识库中检索出最相关的信息片段，并将这些信息作为上下文（Context）一并提供给LLM。
 
 这种方式的优势在于：
 
@@ -27,14 +27,14 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是一种将**信息
 #### **3. 数据结构设计：为精准过滤与溯源而生**
 一个健壮的RAG数据结构，是实现精准过滤和答案溯源的关键。
 
-我们存储在Milvus中的核心单元是一个**“数据块（Chunk）”**，其理想的Schema应包含：
+我们存储在Milvus中的核心单元是一个“**数据块**（**Chunk**）”，其理想的Schema应包含：
 
 | 字段名 | 类型 | 描述 |
 | --- | --- | --- |
 | `chunk_id` | `INT64`<br/> (Primary Key) | 唯一的块ID，建议自动生成。 |
 | `content` | `VARCHAR` | 文本块的原文，这是提供给LLM的核心上下文。 |
 | `embedding` | `FLOAT_VECTOR` | `content`<br/>对应的向量。 |
-| `metadata` | `JSON` | **（关键）**包含所有元信息的JSON对象。 |
+| `metadata` | `JSON` | （关键）包含所有元信息的JSON对象。 |
 
 
 
