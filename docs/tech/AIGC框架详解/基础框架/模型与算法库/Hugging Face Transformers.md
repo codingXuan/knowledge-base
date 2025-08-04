@@ -9,7 +9,7 @@ Hugging Face 不仅仅是一个名为 `transformers` 的Python库，它是一个
 + **作为“GitHub”**：它提供了一个名为 **Hugging Face Hub** 的中央仓库，全世界的研究者和开发者都可以在这里上传、分享、发现和下载数以十万计的预训练模型、数据集和演示应用（Spaces）。
 + **作为“Maven”**：它旗下的 `transformers` 库，提供了一套标准化的接口，让您可以极其方便地在您的代码中，从Hub上下载并使用这些模型，解决了AI领域的“依赖管理”问题。
 
-#### **2. **`**transformers**`** 库的核心抽象**
+#### **2. `transformers` 库的核心抽象**
 `transformers` 这个Python库是整个生态的基石。它的巨大成功在于提供了简洁、统一的接口来处理不同架构的模型。
 
 **A. Pipeline API (管道)**
@@ -51,10 +51,10 @@ model = AutoModelForCausalLM.from_pretrained(model_name)
 #### **3. Hugging Face生态系统的其他关键成员**
 除了 `transformers`，要构建完整的应用，还需要了解其生态中的其他几个核心库：
 
-+ `**datasets**`: 提供了一个标准化的接口来访问和处理Hub上的海量数据集，并支持高效的流式加载和内存映射，能够轻松处理TB级别的数据。
-+ `**tokenizers**`: 一个用Rust编写的、性能极高分词库，是所有模型进行文本预处理的基础。
-+ `**accelerate**`: 极大地简化了在多GPU、TPU或混合精度环境下运行PyTorch代码的复杂性。
-+ `**peft**`** (Parameter-Efficient Fine-Tuning)**：我们之前讨论过的，专门用于实现LoRA、QLoRA等高效微调方法的核心库。
++ `datasets`: 提供了一个标准化的接口来访问和处理Hub上的海量数据集，并支持高效的流式加载和内存映射，能够轻松处理TB级别的数据。
++ `tokenizers`: 一个用Rust编写的、性能极高分词库，是所有模型进行文本预处理的基础。
++ `accelerate`: 极大地简化了在多GPU、TPU或混合精度环境下运行PyTorch代码的复杂性。
++ `peft` (Parameter-Efficient Fine-Tuning)：我们之前讨论过的，专门用于实现LoRA、QLoRA等高效微调方法的核心库。
 
 #### **4. 总结：为什么Hugging Face是基石**
 1. **标准化 (Standardization)**：它为成千上万个不同的模型提供了统一的API，让开发者可以用一套代码来加载和使用不同的模型，极大地降低了切换和实验成本。

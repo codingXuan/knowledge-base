@@ -6,7 +6,7 @@ date: 2025-01-12
 #### **1. 核心定位：为LLM应用打造的专属“数据框架”**
 LlamaIndex的诞生，源于一个核心洞察：当LLM应用与外部数据结合时，最大的挑战往往来自于如何高效地**摄取、索引、检索和合成**这些数据。LangChain虽然也提供RAG功能，但LlamaIndex在此领域做得更深入、更专业。
 
-它的设计哲学是**“以数据为中心（Data-Centric）”**，旨在提供最强大、最灵活的工具，来连接私有或领域特定数据与大语言模型。
+它的设计哲学是“**以数据为中心**（Data-Centric）”，旨在提供最强大、最灵活的工具，来连接私有或领域特定数据与大语言模型。
 
 #### **2. LlamaIndex解决了哪些核心痛点？**
 构建一个简单的RAG原型不难，但要构建一个生产级的、可靠的RAG系统，会遇到很多挑战，而这些正是LlamaIndex的用武之地：
@@ -21,21 +21,21 @@ LlamaIndex将RAG流程抽象成了几个核心组件：
 
 **A. 数据摄取 (Data Ingestion)**
 
-+ `**Document**`** 与 **`**Node**`: 这是LlamaIndex数据处理的基础。`Document`代表原始文档（如一个PDF文件），LlamaIndex会先将其解析成一系列更小的、带有元数据（metadata）的`Node`（节点）。这个`Node`的概念比LangChain中的`Document`切块更精细，它本身就是一个可以包含丰富信息（如与其他节点关系）的对象。
++ `Document` 与 `Node`: 这是LlamaIndex数据处理的基础。`Document`代表原始文档（如一个PDF文件），LlamaIndex会先将其解析成一系列更小的、带有元数据（metadata）的`Node`（节点）。这个`Node`的概念比LangChain中的`Document`切块更精细，它本身就是一个可以包含丰富信息（如与其他节点关系）的对象。
 
 **B. 索引 (Indexing)** 这是LlamaIndex最强大的地方。它不仅仅支持向量索引，还提供了多种索引结构来应对不同场景：
 
-+ `**VectorStoreIndex**`: 最基础的向量索引，用于语义相似度搜索。
-+ `**KeywordTableIndex**`: 基于关键词的索引，用于精确匹配搜索。
-+ `**TreeIndex**`: 将节点组织成树状结构，擅长进行“自上而下”的总结和提炼。
-+ `**KnowledgeGraphIndex**`: 将文档中的实体和关系抽取出，构建成知识图谱，用于图查询。 最关键的是，您可以**组合使用**这些索引。
++ `VectorStoreIndex`: 最基础的向量索引，用于语义相似度搜索。
++ `KeywordTableIndex`: 基于关键词的索引，用于精确匹配搜索。
++ `TreeIndex`: 将节点组织成树状结构，擅长进行“自上而下”的总结和提炼。
++ `KnowledgeGraphIndex`: 将文档中的实体和关系抽取出，构建成知识图谱，用于图查询。 最关键的是，您可以**组合使用**这些索引。
 
 **C. 检索 (Retrieval)** LlamaIndex提供了比“Top-K相似度搜索”丰富得多的高级检索策略：
 
 + **融合检索 (Fusion Retrieval)**：同时执行向量搜索和关键词搜索，然后通过一个重排序（Re-ranking）模型，将两路结果智能地融合，得到最佳的上下文。
 + **多步查询与路由 (Multi-step Queries & Routing)**：可以设置一个“查询路由器”，它会先分析用户的问题，然后决定这个问题是应该去向量索引里查，还是应该去关键词索引里查，甚至可以决定将一个复杂问题拆解成多个子问题，分步进行检索。
 
-**D. 查询引擎 (Query Engine)** 这是面向用户的高级接口。它将**检索（Retriever）**和**结果合成（Synthesizer）**封装在一起。您只需向查询引擎提问，它会自动完成“检索最相关的节点 -> 将节点信息和问题一起构建成Prompt -> 调用LLM生成答案”的完整流程。
+**D. 查询引擎 (Query Engine)** 这是面向用户的高级接口。它将检索（Retriever）和结果合成（Synthesizer）封装在一起。您只需向查询引擎提问，它会自动完成“检索最相关的节点 -> 将节点信息和问题一起构建成Prompt -> 调用LLM生成答案”的完整流程。
 
 #### **4. LlamaIndex vs. LangChain**
 | 特性 | **LangChain** | **LlamaIndex** |

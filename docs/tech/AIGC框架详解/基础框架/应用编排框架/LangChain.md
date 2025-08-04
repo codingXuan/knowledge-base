@@ -15,19 +15,19 @@ LangChain的强大之处在于它将一个复杂的AIGC应用拆解成了若干�
 
 + **它封装了什么？**：封装了与各种大语言模型（无论是OpenAI的API，还是本地部署的Qwen）进行交互的复杂细节。
 + **提供了什么？**：
-    - `**LLMs**`：针对文本补全模型的标准接口。
-    - `**ChatModels**`：针对聊天模型的标准接口。
-    - `**Prompts**`：强大的提示词模板工具，支持变量替换、动态组合等。
-    - `**Output Parsers**`：用于将LLM返回的纯文本字符串，自动解析成结构化的数据（如JSON、列表）。
+    - `LLMs`：针对文本补全模型的标准接口。
+    - `ChatModels`：针对聊天模型的标准接口。
+    - `Prompts`：强大的提示词模板工具，支持变量替换、动态组合等。
+    - `Output Parsers`：用于将LLM返回的纯文本字符串，自动解析成结构化的数据（如JSON、列表）。
 
 **B. 数据连接 (Data Connection)**
 
 + **它封装了什么？**：封装了构建RAG（检索增强生成）流程中所有与数据相关的繁琐操作。
 + **提供了什么？**：
-    - `**Document Loaders**`：从各种数据源（PDF, TXT, Web, Notion等）加载文档。
-    - `**Text Splitters**`：将长文档切分成适合Embedding的、有意义的小文本块。
-    - `**Embeddings**`：提供了调用各种Embedding模型（开源或API）的统一接口。
-    - `**Vector Stores**`：提供了与各种向量数据库（FAISS, Milvus, ChromaDB等）进行交互的统一接口。
+    - `Document Loaders`：从各种数据源（PDF, TXT, Web, Notion等）加载文档。
+    - `Text Splitters`：将长文档切分成适合Embedding的、有意义的小文本块。
+    - `Embeddings`：提供了调用各种Embedding模型（开源或API）的统一接口。
+    - `Vector Stores`：提供了与各种向量数据库（FAISS, Milvus, ChromaDB等）进行交互的统一接口。
 
 **C. 链 (Chains)**
 
@@ -40,8 +40,8 @@ LangChain的强大之处在于它将一个复杂的AIGC应用拆解成了若干�
 
 + **它封装了什么？**：封装了实现Agent所必需的、复杂的“思考-行动”循环（ReAct框架）。
 + **提供了什么？**：
-    - `**Tools**`：一个标准化的接口，用于将任意函数或API（如“查询天气”、“计算器”）封装成可供Agent调用的工具。
-    - `**AgentExecutor**`：这是Agent的“大脑”和“执行器”。您只需要给它一个LLM和一套工具，它就能自动地进行推理、选择工具、执行工具、观察结果，并循环往复直到完成任务。开发者无需手动编写这个复杂的循环逻辑。
+    - `Tools`：一个标准化的接口，用于将任意函数或API（如“查询天气”、“计算器”）封装成可供Agent调用的工具。
+    - `AgentExecutor`：这是Agent的“大脑”和“执行器”。您只需要给它一个LLM和一套工具，它就能自动地进行推理、选择工具、执行工具、观察结果，并循环往复直到完成任务。开发者无需手动编写这个复杂的循环逻辑。
 
 **E. 记忆 (Memory)**
 

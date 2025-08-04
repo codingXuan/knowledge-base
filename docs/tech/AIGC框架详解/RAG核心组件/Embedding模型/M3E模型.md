@@ -40,7 +40,6 @@ from sentence_transformers import SentenceTransformer
 
 # 1. 从Hugging Face加载M3E模型
 # 首次运行时会自动下载模型文件
-# 您也可以像之前一样，先下载到本地，然后加载本地路径
 model_name = 'moka-ai/m3e-base'
 model = SentenceTransformer(model_name)
 

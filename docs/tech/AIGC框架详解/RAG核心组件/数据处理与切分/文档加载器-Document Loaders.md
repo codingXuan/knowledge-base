@@ -8,8 +8,8 @@ Document Loaders (文档加载器) 是RAG流程的**起点**。它的核心职�
 
 一个 `Document` 对象通常包含两部分内容：
 
-+ `**page_content**`: 文档的主要文本内容。
-+ `**metadata**`: 描述文档的元数据，例如来源文件名、页码、网址、作者等。
++ `page_content`: 文档的主要文本内容。
++ `metadata`: 描述文档的元数据，例如来源文件名、页码、网址、作者等。
 
 #### **2. Loader 和 Splitter 的核心区别**
 | 特性 | **Document Loaders (文档加载器)** | **Text Splitters (文本分割器)** |
@@ -89,5 +89,5 @@ print(chunks[0].page_content)
 print(f"Chunk的元数据 (继承自原始页): {chunks[0].metadata}")
 ```
 
-**总结**：Document Loader是RAG系统与多样化数据世界之间的桥梁。它负责**“标准化”**，将任何来源的数据都转换成统一的**`**Document**`**格式，为后续的**“精细化”**处理（由Text Splitter完成）铺平道路。选择合适的Loader，是构建高效、健壮RAG数据管道的第一步。
+**总结**：Document Loader是RAG系统与多样化数据世界之间的桥梁。**它负责“标准化”，将任何来源的数据都转换成统一的`Document`格式，为后续的“精细化”处理（由Text Splitter完成）铺平道路**。选择合适的Loader，是构建高效、健壮RAG数据管道的第一步。
 
